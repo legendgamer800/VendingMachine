@@ -53,11 +53,11 @@ class MainClass
             VendingData[7].ProductPrice = 1.20;
             VendingData[8].ProductPrice = 1.25;
             VendingData[9].ProductPrice = 1.45;
-            Menu(VendingData, Balance);
+            Menu(VendingData, ref Balance);
         }
         
     }
-    static void Menu(MachineInfo[] VendingData, double Balance)
+    static void Menu(MachineInfo[] VendingData, ref double Balance)
     {
 
         int MenuChoice = 0;
@@ -120,7 +120,7 @@ class MainClass
         {
             Console.WriteLine("Wrong product Number, please try again.");
             Console.Clear();
-            Menu(VendingData, Balance);
+            Menu(VendingData, ref Balance);
         }
     }
     static double AddMoney(ref double Balance)
