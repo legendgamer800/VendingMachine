@@ -1,3 +1,4 @@
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -5,14 +6,14 @@ using System.Text;
 
 class MainClass
 {
-    
+
     public struct MachineInfo
     {
         public int ProductID;
         public string ProductName;
         public double ProductPrice;
     }
-    
+
     public static void Main(string[] args)
     {
         double Balance = 1.23; // chnage to 0.00 beofre hand in, default value only for testing purposes
@@ -55,7 +56,7 @@ class MainClass
             VendingData[9].ProductPrice = 1.45;
             Menu(VendingData, ref Balance);
         }
-        
+
     }
     static void Menu(MachineInfo[] VendingData, ref double Balance)
     {
@@ -127,36 +128,53 @@ class MainClass
     {
         Console.WriteLine("Please press the button for how much money for what coin you are entering: \n 1. £2 \n 2. £1 \n 3. 50p \n 4. 20p \n 5. 10p ");
         int ChosenCoin = int.Parse(Console.ReadLine());
-        switch(ChosenCoin)
+        switch (ChosenCoin)
         {
             case 1:
                 Balance += 2;
-                Console.WriteLine("Your balance is now £{0}", Balance);
+                Console.Clear();
+                Console.WriteLine("-------------------------------------------------------\nYour balance is now £{0} \n returning to main menu\n-------------------------------------------------------", Balance);
+                System.Threading.Thread.Sleep(2000);
+                Console.Clear();
                 return Balance;
                 break;
             case 2:
                 Balance += 1;
-                Console.WriteLine("Your balance is now £{0}", Balance);
+                Console.Clear();
+                Console.WriteLine("-------------------------------------------------------\nYour balance is now £{0} \n returning to main menu\n-------------------------------------------------------", Balance);
+                System.Threading.Thread.Sleep(2000);
+                Console.Clear();
                 return Balance;
                 break;
             case 3:
                 Balance += 0.50;
-                Console.WriteLine("Your balance is now £{0}", Balance);
+                Console.Clear();
+                Console.WriteLine("-------------------------------------------------------\nYour balance is now £{0} \n returning to main menu\n-------------------------------------------------------", Balance);
+                System.Threading.Thread.Sleep(2000);
+                Console.Clear();
                 return Balance;
                 break;
             case 4:
                 Balance += 0.20;
-                Console.WriteLine("Your balance is now £{0}", Balance);
+                Console.Clear();
+                Console.WriteLine("-------------------------------------------------------\nYour balance is now £{0} \n returning to main menu\n-------------------------------------------------------", Balance);
+                System.Threading.Thread.Sleep(2000);
+                Console.Clear();
                 return Balance;
                 break;
             case 5:
                 Balance += 0.10;
-                Console.WriteLine("Your balance is now £{0}", Balance);
+                Console.Clear();
+                Console.WriteLine("-------------------------------------------------------\nYour balance is now £{0} \n returning to main menu\n-------------------------------------------------------", Balance);
+                System.Threading.Thread.Sleep(2000);
+                Console.Clear();
                 return Balance;
                 break;
             default:
-                Console.WriteLine("Invalid unit of currency. please try again");
-                Console.WriteLine("Your balance is still £{0}", Balance);
+                Console.Clear();
+                Console.WriteLine("-------------------------------------------------------\nYou have not pressed a valid number.\nYour balance is still £{0} \n returning to main menu\n-------------------------------------------------------", Balance);
+                System.Threading.Thread.Sleep(2000);
+                Console.Clear();
                 return Balance;
                 break;
 
