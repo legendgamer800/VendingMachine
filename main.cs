@@ -12,12 +12,13 @@ class MainClass
         public string ProductName;
         public double ProductPrice;
     }
+    double Balance = 1.23; // chnage to 0.00 beofre hand in, default value only for testing purposes
     public static void Main(string[] args)
     {
         int Repeat = 1;
         while (Repeat == 1)
         {
-            double Balance = 1.23; // chnage to 0.00 beofre hand in, default value only for testing purposes
+
             MachineInfo[] VendingData = new MachineInfo[10];
             VendingData[0].ProductID = 01;
             VendingData[1].ProductID = 02;
@@ -121,7 +122,7 @@ class MainClass
             Menu(VendingData, Balance);
         }
     }
-    static void AddMoney(ref double Balance)
+    static double AddMoney(ref double Balance)
     {
         Console.WriteLine("Please press the button for how much money for what coin you are entering: \n 1. £2 \n 2. £1 \n 3. 50p \n 4. 20p \n 5. 10p ");
         int ChosenCoin = int.Parse(Console.ReadLine());
@@ -155,6 +156,7 @@ class MainClass
             default:
                 Console.WriteLine("Invalid unit of currency. please try again");
                 Console.WriteLine("Your balance is still £{0}", Balance);
+                return Balance;
                 break;
 
         }
