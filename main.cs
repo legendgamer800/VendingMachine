@@ -5,6 +5,7 @@ using System.Text;
 
 class MainClass
 {
+    
     public struct MachineInfo
     {
         public int ProductID;
@@ -13,42 +14,46 @@ class MainClass
     }
     public static void Main(string[] args)
     {
+        int Repeat = 1;
+        while (Repeat == 1)
+        {
+            double Balance = 1.23; // chnage to 0.00 beofre hand in, default value only for testing purposes
+            MachineInfo[] VendingData = new MachineInfo[10];
+            VendingData[0].ProductID = 01;
+            VendingData[1].ProductID = 02;
+            VendingData[2].ProductID = 03;
+            VendingData[3].ProductID = 04;
+            VendingData[4].ProductID = 05;
+            VendingData[5].ProductID = 06;
+            VendingData[6].ProductID = 07;
+            VendingData[7].ProductID = 08;
+            VendingData[8].ProductID = 09;
+            VendingData[9].ProductID = 10;
 
-        double Balance = 1.23; // chnage to 0.00 beofre hand in, default value only for testing purposes
-        MachineInfo[] VendingData = new MachineInfo[10];
-        VendingData[0].ProductID = 01;
-        VendingData[1].ProductID = 02;
-        VendingData[2].ProductID = 03;
-        VendingData[3].ProductID = 04;
-        VendingData[4].ProductID = 05;
-        VendingData[5].ProductID = 06;
-        VendingData[6].ProductID = 07;
-        VendingData[7].ProductID = 08;
-        VendingData[8].ProductID = 09;
-        VendingData[9].ProductID = 10;
+            VendingData[0].ProductName = " Mars bar";
+            VendingData[1].ProductName = " Twix";
+            VendingData[2].ProductName = " Snicker";
+            VendingData[3].ProductName = " Cadbury";
+            VendingData[4].ProductName = " Crisps";
+            VendingData[5].ProductName = " Water";
+            VendingData[6].ProductName = " OrangeJ";
+            VendingData[7].ProductName = " AppleJ";
+            VendingData[8].ProductName = " Iced tea";
+            VendingData[9].ProductName = "Pepsi";
 
-        VendingData[0].ProductName = " Mars bar";
-        VendingData[1].ProductName = " Twix";
-        VendingData[2].ProductName = " Snicker";
-        VendingData[3].ProductName = " Cadbury";
-        VendingData[4].ProductName = " Crisps";
-        VendingData[5].ProductName = " Water";
-        VendingData[6].ProductName = " OrangeJ";
-        VendingData[7].ProductName = " AppleJ";
-        VendingData[8].ProductName = " Iced tea";
-        VendingData[9].ProductName = "Pepsi";
-
-        VendingData[0].ProductPrice = 0.80;
-        VendingData[1].ProductPrice = 0.80;
-        VendingData[2].ProductPrice = 0.80;
-        VendingData[3].ProductPrice = 0.90;
-        VendingData[4].ProductPrice = 1.10;
-        VendingData[5].ProductPrice = 0.50;
-        VendingData[6].ProductPrice = 1.20;
-        VendingData[7].ProductPrice = 1.20;
-        VendingData[8].ProductPrice = 1.25;
-        VendingData[9].ProductPrice = 1.45;
-        Menu(VendingData, Balance);
+            VendingData[0].ProductPrice = 0.80;
+            VendingData[1].ProductPrice = 0.80;
+            VendingData[2].ProductPrice = 0.80;
+            VendingData[3].ProductPrice = 0.90;
+            VendingData[4].ProductPrice = 1.10;
+            VendingData[5].ProductPrice = 0.50;
+            VendingData[6].ProductPrice = 1.20;
+            VendingData[7].ProductPrice = 1.20;
+            VendingData[8].ProductPrice = 1.25;
+            VendingData[9].ProductPrice = 1.45;
+            Menu(VendingData, Balance);
+        }
+        
     }
     static void Menu(MachineInfo[] VendingData, double Balance)
     {
@@ -124,30 +129,31 @@ class MainClass
         {
             case 1:
                 Balance += 2;
-                Console.WriteLine("Your balance is now £{0}", Balance);
+                Console.WriteLine("YOur balance is now £{0}", Balance);
                 break;
             case 2:
                 Balance += 1;
-                Console.WriteLine("Your balance is now £{0}", Balance);
+                Console.WriteLine("YOur balance is now £{0}", Balance);
                 break;
             case 3:
                 Balance += 0.50;
-                Console.WriteLine("Your balance is now £{0}", Balance);
+                Console.WriteLine("YOur balance is now £{0}", Balance);
                 break;
             case 4:
                 Balance += 0.20;
-                Console.WriteLine("Your balance is now £{0}", Balance);
+                Console.WriteLine("YOur balance is now £{0}", Balance);
                 break;
             case 5:
                 Balance += 0.10;
-                Console.WriteLine("Your balance is now £{0}", Balance);
+                Console.WriteLine("YOur balance is now £{0}", Balance);
                 break;
             default:
                 Console.WriteLine("Invalid unit of currency. please try again");
-                Console.WriteLine("Your balance is still £{0}", Balance);
+                Console.WriteLine("YOur balance is still £{0}", Balance);
                 break;
 
         }
 
     }
+}
 }
