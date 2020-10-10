@@ -12,9 +12,10 @@ class MainClass
         public string ProductName;
         public double ProductPrice;
     }
-    double Balance = 1.23; // chnage to 0.00 beofre hand in, default value only for testing purposes
+    
     public static void Main(string[] args)
     {
+        double Balance = 1.23; // chnage to 0.00 beofre hand in, default value only for testing purposes
         int Repeat = 1;
         while (Repeat == 1)
         {
