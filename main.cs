@@ -129,27 +129,32 @@ class MainClass
         {
             case 1:
                 Balance += 2;
-                Console.WriteLine("YOur balance is now £{0}", Balance);
+                Console.WriteLine("Your balance is now £{0}", Balance);
+                return Balance;
                 break;
             case 2:
                 Balance += 1;
-                Console.WriteLine("YOur balance is now £{0}", Balance);
+                Console.WriteLine("Your balance is now £{0}", Balance);
+                return Balance;
                 break;
             case 3:
                 Balance += 0.50;
-                Console.WriteLine("YOur balance is now £{0}", Balance);
+                Console.WriteLine("Your balance is now £{0}", Balance);
+                return Balance;
                 break;
             case 4:
                 Balance += 0.20;
-                Console.WriteLine("YOur balance is now £{0}", Balance);
+                Console.WriteLine("Your balance is now £{0}", Balance);
+                return Balance;
                 break;
             case 5:
                 Balance += 0.10;
-                Console.WriteLine("YOur balance is now £{0}", Balance);
+                Console.WriteLine("Your balance is now £{0}", Balance);
+                return Balance;
                 break;
             default:
                 Console.WriteLine("Invalid unit of currency. please try again");
-                Console.WriteLine("YOur balance is still £{0}", Balance);
+                Console.WriteLine("Your balance is still £{0}", Balance);
                 break;
 
         }
